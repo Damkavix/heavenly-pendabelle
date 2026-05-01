@@ -990,7 +990,7 @@ button { cursor: pointer; border: none; background: none; }
   padding: .7rem 1rem;
   border: 1.5px solid var(--c-ivory-dark);
   border-radius: var(--radius-sm);
-  font-size: .95rem;
+  font-size: 1rem;
   color: var(--c-brown);
   background: var(--c-ivory);
   transition: border-color var(--transition), box-shadow var(--transition);
@@ -1095,7 +1095,7 @@ button { cursor: pointer; border: none; background: none; }
   padding: .75rem 1.1rem;
   border: 1.5px solid rgba(212,168,67,.3);
   border-radius: var(--radius-full);
-  font-size: .95rem;
+  font-size: 1rem;
   background: var(--c-white);
   color: var(--c-brown);
   transition: border-color var(--transition);
@@ -1310,7 +1310,7 @@ button { cursor: pointer; border: none; background: none; }
    RESPONSIVE – 768px
 ═══════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
-  :root { --section-py: 3.5rem; }
+  :root { --section-py: 3rem; }
 
   /* Header */
   .nav { display: none; }
@@ -1318,7 +1318,15 @@ button { cursor: pointer; border: none; background: none; }
   .hamburger { display: flex; }
 
   /* Hero */
-  .hero__ctas { flex-direction: column; align-items: flex-start; }
+  .hero__content { padding-block: 2.5rem 2rem; }
+  .hero__ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero__ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
   .hero__scroll { display: none; }
 
   /* Marque */
@@ -1326,6 +1334,15 @@ button { cursor: pointer; border: none; background: none; }
 
   /* Produits */
   .products-grid { grid-template-columns: 1fr; }
+  .product-card__footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: .75rem;
+  }
+  .product-card__footer .btn {
+    width: 100%;
+    justify-content: center;
+  }
 
   /* Bienfaits */
   .benefit-block,
@@ -1340,12 +1357,18 @@ button { cursor: pointer; border: none; background: none; }
   /* Carousel */
   .testimonial-card { flex: 0 0 calc(100% - 1.5rem); }
 
+  /* Touch targets */
+  .filter-tab { padding: .7rem 1.5rem; min-height: 44px; }
+  .carousel__btn { width: 48px; height: 48px; }
+
   /* Formulaire */
   .form-row { grid-template-columns: 1fr; }
+  .form-input { min-height: 48px; }
 
   /* Newsletter */
   .newsletter__input-wrap { flex-direction: column; }
   .newsletter__btn { width: 100%; justify-content: center; }
+  .newsletter__input { min-height: 48px; }
 
   /* Footer */
   .footer__inner { grid-template-columns: 1fr; }
@@ -1356,12 +1379,57 @@ button { cursor: pointer; border: none; background: none; }
    RESPONSIVE – 480px
 ═══════════════════════════════════════════════════════════ */
 @media (max-width: 480px) {
-  .hero__title { font-size: 2.2rem; }
+  :root { --section-py: 2.5rem; }
 
-  .order-form { padding: 1.5rem; }
+  .hero__title { font-size: 2rem; }
 
-  .whatsapp-float { right: 1rem; bottom: 1rem; }
-  .back-to-top    { right: 1rem; bottom: 5rem; }
+  /* WhatsApp flottant : icône seule */
+  .whatsapp-float {
+    padding: .9rem;
+    border-radius: 50%;
+    right: 1rem;
+    bottom: 1rem;
+  }
+  .whatsapp-float__label { display: none; }
+
+  .back-to-top { right: 1rem; bottom: 5rem; }
+
+  .order-form { padding: 1.25rem; }
+
+  .section-header { margin-bottom: 1.75rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE – 360px (très petits écrans)
+═══════════════════════════════════════════════════════════ */
+@media (max-width: 360px) {
+  .hero__title { font-size: 1.75rem; }
+  .hero__subtitle { font-size: .95rem; }
+  .container { padding-inline: 1rem; }
+  .order-form { padding: 1rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SAFE AREA – iPhone notch / Dynamic Island
+═══════════════════════════════════════════════════════════ */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .whatsapp-float {
+    bottom: calc(1.75rem + env(safe-area-inset-bottom));
+  }
+  .back-to-top {
+    bottom: calc(5.5rem + env(safe-area-inset-bottom));
+  }
+}
+
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  @media (max-width: 480px) {
+    .whatsapp-float {
+      bottom: calc(1rem + env(safe-area-inset-bottom));
+    }
+    .back-to-top {
+      bottom: calc(5rem + env(safe-area-inset-bottom));
+    }
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════
