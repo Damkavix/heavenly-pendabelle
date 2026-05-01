@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Heavenly by PENDABELLE – Infusions naturelles & Céréales protéinées pour la femme qui prend soin d'elle. Livraison à Dakar, Sénégal." />
+  <title>Heavenly by PENDABELLE | Infusions & Céréales Naturelles – Dakar</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  HEADER / NAVIGATION                       -->
+  <!-- ══════════════════════════════════════════ -->
+  <header class="header" id="header" role="banner">
+    <div class="container header__inner">
+
+      <!-- Logo -->
+      <a href="#accueil" class="logo" aria-label="Heavenly by PENDABELLE – Accueil">
+        <span class="logo__heavenly">Heavenly</span>
+        <span class="logo__by">by</span>
+        <span class="logo__brand">PENDABELLE</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav" role="navigation" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a href="#accueil" class="nav__link">Accueil</a></li>
+          <li><a href="#produits" class="nav__link">Produits</a></li>
+          <li><a href="#bienfaits" class="nav__link">Bienfaits</a></li>
+          <li><a href="#temoignages" class="nav__link">Témoignages</a></li>
+          <li><a href="#boutique" class="nav__link">Boutique</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA + Hamburger -->
+      <div class="header__actions">
+        <a href="#boutique" class="btn btn--gold btn--sm">Commander maintenant</a>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile" aria-hidden="true">
+      <ul class="mobile-nav__list">
+        <li><a href="#accueil" class="mobile-nav__link">Accueil</a></li>
+        <li><a href="#produits" class="mobile-nav__link">Produits</a></li>
+        <li><a href="#bienfaits" class="mobile-nav__link">Bienfaits</a></li>
+        <li><a href="#temoignages" class="mobile-nav__link">Témoignages</a></li>
+        <li><a href="#boutique" class="mobile-nav__link">Boutique</a></li>
+        <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
+        <li><a href="#boutique" class="btn btn--gold mobile-nav__cta">Commander maintenant</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!--  HERO SECTION                              -->
+    <!-- ══════════════════════════════════════════ -->
+    <section class="hero" id="accueil" aria-label="Section principale">
+      <div class="hero__bg">
+        <img
+          src="https://images.unsplash.com/photo-1541844053589-346841d0b34c?w=1600&q=80&auto=format&fit=crop"
+          alt="Femme sereine tenant une tasse d'infusion naturelle entourée de plantes"
+          class="hero__image"
+          loading="eager"
+        />
+        <div class="hero__overlay"></div>
+        <!-- Motif wax subtil -->
+        <div class="hero__pattern" aria-hidden="true"></div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="hero__eyebrow animate-fade-up">✦ Naturel · Africain · Premium</p>
+        <h1 class="hero__title animate-fade-up delay-1">
+          Nourris ton corps.<br />
+          Révèle ta beauté.<br />
+          <em>Vis Heavenly.</em>
+        </h1>
+        <p class="hero__subtitle animate-fade-up delay-2">
+          Infusions naturelles &amp; Céréales protéinées<br />
+          pour la femme qui prend soin d'elle.
+        </p>
+        <div class="hero__ctas animate-fade-up delay-3">
+          <a href="#produits" class="btn btn--gold btn--lg">Découvrir nos produits</a>
+          <a href="#marque" class="btn btn--outline btn--lg">En savoir plus</a>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="hero__scroll" aria-hidden="true">
+          <span class="hero__scroll-line"></span>
+          <span class="hero__scroll-text">Défiler</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!--  PRÉSENTATION DE LA MARQUE                 -->
+    <!-- ══════════════════════════════════════════ -->
+    <section class="marque" id="marque" aria-labelledby="marque-title">
+      <div class="container">
+        <div class="marque__story reveal">
+          <span class="section-label">Notre histoire</span>
+          <h2 id="marque-title" class="section-title">Née de la terre, créée pour toi</h2>
+          <p class="marque__text">
+            Heavenly by PENDABELLE est née d'une conviction simple : la nature africaine recèle des trésors
+            pour la santé et la beauté de la femme moderne. Nos recettes puisent dans la richesse des plantes
+            du Sénégal et d'Afrique, transformées avec soin pour t'offrir le meilleur de la nature, sans
+            compromis sur la qualité ni sur le goût.
+          </p>
+        </div>
+
+        <!-- 3 valeurs -->
+        <div class="values reveal">
+          <div class="value-card">
+            <div class="value-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3 class="value-card__title">100% Naturel</h3>
+            <p class="value-card__desc">Aucun additif, aucun conservateur. Uniquement ce que la nature offre de meilleur.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </div>
+            <h3 class="value-card__title">Fait au Sénégal</h3>
+            <p class="value-card__desc">Fabriqué avec fierté à Dakar, valorisant le savoir-faire local et les plantes africaines.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="value-card__title">Bienfaits prouvés</h3>
+            <p class="value-card__desc">Des formules testées et approuvées par des femmes actives qui ont transformé leur quotidien.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!--  NOS PRODUITS (CATALOGUE)                  -->
+    <!-- ══════════════════════════════════════════ -->
+    <section class="produits" id="produits" aria-labelledby="produits-title">
+      <div class="produits__decor" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Catalogue</span>
+          <h2 id="produits-title" class="section-title">Nos Produits Signature</h2>
+          <p class="section-subtitle">Chaque produit est une invitation à prendre soin de toi, naturellement.</p>
+        </div>
+
+        <!-- Filtres -->
+        <div class="filter-tabs reveal" role="tablist" aria-label="Filtrer les produits">
+          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">Tous</button>
+          <button class="filter-tab" data-filter="infusion" role="tab" aria-selected="false">Infusions</button>
+          <button class="filter-tab" data-filter="cereale" role="tab" aria-selected="false">Céréales Protéinées</button>
+        </div>
+
+        <!-- Grille produits -->
+        <div class="products-grid" id="products-grid">
+
+          <!-- PRODUIT 1 -->
+          <article class="product-card reveal" data-category="infusion" role="article">
+            <div class="product-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=600&q=75&auto=format&fit=crop"
+                alt="Infusion Bissap Premium – fleurs d'hibiscus séchées rouges"
+                class="product-card__image"
+                loading="lazy"
+              />
+              <span class="product-card__badge badge--infusion">Infusion</span>
+              <div class="product-card__overlay">
+                <a href="#boutique" class="btn btn--gold btn--sm">Commander</a>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Infusion Bissap Premium</h3>
+              <p class="product-card__desc">Fleurs d'hibiscus séchées, riches en antioxydants. Éclat de la peau, détox et immunité.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">3 500 FCFA</span>
+                <a href="#boutique" class="btn btn--bordeaux btn--sm" aria-label="Ajouter Infusion Bissap au panier">Ajouter au panier</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUIT 2 -->
+          <article class="product-card reveal" data-category="infusion" role="article">
+            <div class="product-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=75&auto=format&fit=crop"
+                alt="Infusion Gingembre & Citronnelle – tasse vapeur avec gingembre frais"
+                class="product-card__image"
+                loading="lazy"
+              />
+              <span class="product-card__badge badge--infusion">Infusion</span>
+              <div class="product-card__overlay">
+                <a href="#boutique" class="btn btn--gold btn--sm">Commander</a>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Infusion Gingembre &amp; Citron</h3>
+              <p class="product-card__desc">Racine de gingembre frais et zeste de citron. Boost d'énergie, digestion et anti-inflammatoire.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">4 000 FCFA</span>
+                <a href="#boutique" class="btn btn--bordeaux btn--sm" aria-label="Ajouter Infusion Gingembre au panier">Ajouter au panier</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUIT 3 -->
+          <article class="product-card reveal" data-category="infusion" role="article">
+            <div class="product-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=75&auto=format&fit=crop"
+                alt="Thé Vert Détox Africain – théière en terre et feuilles de thé"
+                class="product-card__image"
+                loading="lazy"
+              />
+              <span class="product-card__badge badge--infusion">Infusion</span>
+              <div class="product-card__overlay">
+                <a href="#boutique" class="btn btn--gold btn--sm">Commander</a>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Thé Vert Détox Africain</h3>
+              <p class="product-card__desc">Mélange exclusif de thé vert et plantes locales. Purifiant, minceur et anti-fatigue.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">4 500 FCFA</span>
+                <a href="#boutique" class="btn btn--bordeaux btn--sm" aria-label="Ajouter Thé Vert au panier">Ajouter au panier</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUIT 4 -->
+          <article class="product-card reveal" data-category="cereale" role="article">
+            <div class="product-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=75&auto=format&fit=crop"
+                alt="Céréales Protéinées Prise de Masse – bol de céréales dorées avec fruits secs"
+                class="product-card__image"
+                loading="lazy"
+              />
+              <span class="product-card__badge badge--cereale">Céréale</span>
+              <div class="product-card__overlay">
+                <a href="#boutique" class="btn btn--gold btn--sm">Commander</a>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Céréales Prise de Masse</h3>
+              <p class="product-card__desc">Formule riche en protéines végétales pour un gain musculaire sain et progressif.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">7 500 FCFA</span>
+                <a href="#boutique" class="btn btn--bordeaux btn--sm" aria-label="Ajouter Céréales Prise de Masse au panier">Ajouter au panier</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUIT 5 -->
+          <article class="product-card reveal" data-category="cereale" role="article">
+            <div class="product-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=600&q=75&auto=format&fit=crop"
+                alt="Céréales Modelage Féminin – graines colorées et céréales dans un bol"
+                class="product-card__image"
+                loading="lazy"
+              />
+              <span class="product-card__badge badge--cereale">Céréale</span>
+              <div class="product-card__overlay">
+                <a href="#boutique" class="btn btn--gold btn--sm">Commander</a>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Céréales Modelage Féminin</h3>
+              <p class="product-card__desc">Conçue pour galber les formes féminines. Protéines + fibres pour un corps sculpté naturellement.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">8 000 FCFA</span>
+                <a href="#boutique" class="btn btn--bordeaux btn--sm" aria-label="Ajouter Céréales Modelage au panier">Ajouter au panier</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUIT 6 -->
+          <article class="product-card reveal" data-category="infusion" role="article">
+            <div class="product-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=600&q=75&auto=format&fit=crop"
+                alt="Infusion Moringa Beauté – poudre verte moringa et fleurs séchées"
+                class="product-card__image"
+                loading="lazy"
+              />
+              <span class="product-card__badge badge--infusion">Infusion</span>
+              <div class="product-card__overlay">
+                <a href="#boutique" class="btn btn--gold btn--sm">Commander</a>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Infusion Moringa Beauté</h3>
+              <p class="product-card__desc">Moringa africain pur. L'arbre miracle pour la peau, les cheveux et la vitalité féminine.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">5 000 FCFA</span>
+                <a href="#boutique" class="btn btn--bordeaux btn--sm" aria-label="Ajouter Infusion Moringa au panier">Ajouter au panier</a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /products-grid -->
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!--  LES BIENFAITS                             -->
+    <!-- ══════════════════════════════════════════ -->
+    <section class="bienfaits" id="bienfaits" aria-labelledby="bienfaits-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label section-label--light">Nos bienfaits</span>
+          <h2 id="bienfaits-title" class="section-title section-title--light">Pourquoi choisir Heavenly ?</h2>
+          <p class="section-subtitle section-subtitle--light">Des produits qui transforment ton quotidien, de l'intérieur vers l'extérieur.</p>
+        </div>
+
+        <!-- Bloc INFUSIONS -->
+        <div class="benefit-block reveal">
+          <div class="benefit-block__image-col">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80&auto=format&fit=crop&crop=faces"
+              alt="Femme épanouie tenant une tasse d'infusion chaude devant fenêtre lumineuse"
+              class="benefit-block__image"
+              loading="lazy"
+            />
+          </div>
+          <div class="benefit-block__text-col">
+            <div class="benefit-block__icon-big" aria-hidden="true">🌺</div>
+            <h3 class="benefit-block__title">Nos Infusions Naturelles</h3>
+            <p class="benefit-block__intro">Un rituel quotidien pour te sentir légère, rayonnante et en pleine santé.</p>
+            <ul class="benefit-list">
+              <li class="benefit-item">
+                <span class="benefit-item__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="M8 12s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg>
+                </span>
+                <div>
+                  <strong>Détox naturelle</strong>
+                  <span>Élimine les toxines et purifie ton organisme en douceur.</span>
+                </div>
+              </li>
+              <li class="benefit-item">
+                <span class="benefit-item__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 8v4l3 3"/></svg>
+                </span>
+                <div>
+                  <strong>Antioxydants puissants</strong>
+                  <span>Protège tes cellules du vieillissement prématuré.</span>
+                </div>
+              </li>
+              <li class="benefit-item">
+                <span class="benefit-item__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </span>
+                <div>
+                  <strong>Éclat de la peau</strong>
+                  <span>Vitamines et minéraux pour une peau lumineuse et hydratée.</span>
+                </div>
+              </li>
+              <li class="benefit-item">
+                <span class="benefit-item__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+                </span>
+                <div>
+                  <strong>Digestion &amp; immunité</strong>
+                  <span>Apaise ton système digestif et renforce tes défenses naturelles.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bloc CÉRÉALES (image à droite) -->
+        <div class="benefit-block benefit-block--reverse reveal">
+          <div class="benefit-block__image-col">
+            <img
+              src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=700&q=80&auto=format&fit=crop"
+              alt="Femme sportive et épanouie préparant ses céréales protéinées dans une cuisine moderne"
+              class="benefit-block__image"
+              loading="lazy"
+            />
+          </div>
+          <div class="benefit-block__text-col">
+            <div class="benefit-block__icon-big" aria-hidden="true">🌾</div>
+            <h3 class="benefit-block__title">Nos Céréales Protéinées</h3>
+            <p class="benefit-block__intro">La nutrition intelligente pour sculpter ton corps et nourrir ton énergie.</p>
+            <ul class="benefit-list">
+              <li class="benefit-item">
+                <span class="benefit-item__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                </span>
+                <div>
+                  <strong>Prise de masse saine</strong>
+                  <span>Protéines végétales de haute qualité pour développer ta masse musculaire.</span>
+                </div>
+              </li>
+              <li class="benefit-item">
+                <span class="benefit-item__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </span>
+                <div>
+                  <strong>Modelage des formes féminines</strong>
+                  <span>Galbe naturellement tes courbes pour un corps harmonieux.</span>
+                </div>
+              </li>
+              <li class="benefit-item">
+                <span class="benefit-item__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </span>
+                <div>
+                  <strong>Énergie durable</strong>
+                  <span>Libère une énergie stable tout au long de la journée, sans pic glycémique.</span>
+                </div>
+              </li>
+              <li class="benefit-item">
+                <span class="benefit-item__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </span>
+                <div>
+                  <strong>Sans additifs ni colorants</strong>
+                  <span>100% naturel, certifié sans conservateurs ni arômes artificiels.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!--  TÉMOIGNAGES                               -->
+    <!-- ══════════════════════════════════════════ -->
+    <section class="temoignages" id="temoignages" aria-labelledby="temoignages-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Témoignages</span>
+          <h2 id="temoignages-title" class="section-title">Elles ont adopté Heavenly</h2>
+          <p class="section-subtitle">Des femmes réelles, des transformations authentiques.</p>
+        </div>
+
+        <!-- Carousel wrapper -->
+        <div class="carousel" role="region" aria-label="Témoignages clients" aria-roledescription="carousel">
+          <div class="carousel__track" id="carousel-track">
+
+            <div class="testimonial-card" role="group" aria-roledescription="slide">
+              <div class="testimonial-card__stars" aria-label="5 étoiles sur 5">★★★★★</div>
+              <blockquote class="testimonial-card__quote">
+                "L'infusion Bissap a vraiment changé ma routine. Ma peau est plus claire, je me sens légère. Je ne peux plus m'en passer !"
+              </blockquote>
+              <div class="testimonial-card__author">
+                <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=80&h=80&q=75&auto=format&fit=crop&crop=faces" alt="Photo de Fatou" class="testimonial-card__avatar" loading="lazy" />
+                <div>
+                  <strong>Fatou N.</strong>
+                  <span>Dakar, Sénégal</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card" role="group" aria-roledescription="slide">
+              <div class="testimonial-card__stars" aria-label="5 étoiles sur 5">★★★★★</div>
+              <blockquote class="testimonial-card__quote">
+                "Les céréales Modelage Féminin sont incroyables ! En 6 semaines, mes formes ont vraiment changé. Produit naturel et délicieux."
+              </blockquote>
+              <div class="testimonial-card__author">
+                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=80&h=80&q=75&auto=format&fit=crop&crop=faces" alt="Photo de Aminata" class="testimonial-card__avatar" loading="lazy" />
+                <div>
+                  <strong>Aminata D.</strong>
+                  <span>Saint-Louis, Sénégal</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card" role="group" aria-roledescription="slide">
+              <div class="testimonial-card__stars" aria-label="5 étoiles sur 5">★★★★★</div>
+              <blockquote class="testimonial-card__quote">
+                "Le thé Moringa Beauté est mon secret bien-être. En plus d'être délicieux, mon énergie a décollé. Merci PENDABELLE !"
+              </blockquote>
+              <div class="testimonial-card__author">
+                <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=80&h=80&q=75&auto=format&fit=crop&crop=faces" alt="Photo de Rokhaya" class="testimonial-card__avatar" loading="lazy" />
+                <div>
+                  <strong>Rokhaya S.</strong>
+                  <span>Thiès, Sénégal</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card" role="group" aria-roledescription="slide">
+              <div class="testimonial-card__stars" aria-label="5 étoiles sur 5">★★★★★</div>
+              <blockquote class="testimonial-card__quote">
+                "J'étais sceptique au début, mais après 1 mois avec les céréales Prise de Masse, j'ai enfin le corps que je voulais. Livraison rapide !"
+              </blockquote>
+              <div class="testimonial-card__author">
+                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=80&h=80&q=75&auto=format&fit=crop&crop=faces" alt="Photo de Mariama" class="testimonial-card__avatar" loading="lazy" />
+                <div>
+                  <strong>Mariama K.</strong>
+                  <span>Ziguinchor, Sénégal</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card" role="group" aria-roledescription="slide">
+              <div class="testimonial-card__stars" aria-label="4 étoiles sur 5">★★★★☆</div>
+              <blockquote class="testimonial-card__quote">
+                "L'infusion gingembre citron pour moi c'est la vie ! Mon ventre est plus plat, ma digestion au top. Je commande tous les mois."
+              </blockquote>
+              <div class="testimonial-card__author">
+                <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=80&h=80&q=75&auto=format&fit=crop&crop=faces" alt="Photo de Khady" class="testimonial-card__avatar" loading="lazy" />
+                <div>
+                  <strong>Khady B.</strong>
+                  <span>Mbour, Sénégal</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card" role="group" aria-roledescription="slide">
+              <div class="testimonial-card__stars" aria-label="5 étoiles sur 5">★★★★★</div>
+              <blockquote class="testimonial-card__quote">
+                "Emballage magnifique, goût authentique, service client au top. Heavenly c'est vraiment une marque sénégalaise dont on peut être fière !"
+              </blockquote>
+              <div class="testimonial-card__author">
+                <img src="https://images.unsplash.com/photo-1614644147798-f8c0fc9da7f6?w=80&h=80&q=75&auto=format&fit=crop&crop=faces" alt="Photo de Ndéye" class="testimonial-card__avatar" loading="lazy" />
+                <div>
+                  <strong>Ndéye F.</strong>
+                  <span>Dakar, Sénégal</span>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /carousel__track -->
+
+          <!-- Navigation -->
+          <div class="carousel__controls" aria-label="Contrôles du carousel">
+            <button class="carousel__btn" id="carousel-prev" aria-label="Témoignage précédent">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="carousel__dots" id="carousel-dots" role="tablist" aria-label="Navigation par points"></div>
+            <button class="carousel__btn" id="carousel-next" aria-label="Témoignage suivant">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!--  BOUTIQUE / COMMANDE                       -->
+    <!-- ══════════════════════════════════════════ -->
+    <section class="boutique" id="boutique" aria-labelledby="boutique-title">
+      <div class="boutique__decor" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Commander</span>
+          <h2 id="boutique-title" class="section-title">Commandez en quelques clics</h2>
+          <p class="section-subtitle">Votre commande est transmise directement via WhatsApp pour un traitement rapide et personnalisé.</p>
+        </div>
+
+        <div class="boutique__inner">
+
+          <!-- Récapitulatif produits -->
+          <div class="boutique__summary reveal">
+            <h3 class="boutique__summary-title">Nos produits disponibles</h3>
+            <ul class="boutique__product-list">
+              <li>
+                <span class="boutique__product-name">🌺 Infusion Bissap Premium</span>
+                <span class="boutique__product-price">3 500 FCFA</span>
+              </li>
+              <li>
+                <span class="boutique__product-name">🫚 Infusion Gingembre &amp; Citron</span>
+                <span class="boutique__product-price">4 000 FCFA</span>
+              </li>
+              <li>
+                <span class="boutique__product-name">🍵 Thé Vert Détox Africain</span>
+                <span class="boutique__product-price">4 500 FCFA</span>
+              </li>
+              <li>
+                <span class="boutique__product-name">🌿 Infusion Moringa Beauté</span>
+                <span class="boutique__product-price">5 000 FCFA</span>
+              </li>
+              <li>
+                <span class="boutique__product-name">🌾 Céréales Prise de Masse</span>
+                <span class="boutique__product-price">7 500 FCFA</span>
+              </li>
+              <li>
+                <span class="boutique__product-name">✨ Céréales Modelage Féminin</span>
+                <span class="boutique__product-price">8 000 FCFA</span>
+              </li>
+            </ul>
+            <div class="boutique__info">
+              <p>📦 Livraison à Dakar – délai 24h à 48h</p>
+              <p>🛍️ Retrait possible sur Dakar</p>
+              <p>💳 Paiement à la livraison ou Wave/Orange Money</p>
+            </div>
+          </div>
+
+          <!-- Formulaire de commande -->
+          <form class="order-form reveal" id="order-form" novalidate aria-label="Formulaire de commande WhatsApp">
+            <h3 class="order-form__title">Votre commande</h3>
+
+            <div class="form-group">
+              <label for="customer-name" class="form-label">Nom complet <span aria-hidden="true">*</span></label>
+              <input type="text" id="customer-name" name="customerName" class="form-input" placeholder="Ex. Fatou Diallo" required autocomplete="name" aria-required="true" />
+            </div>
+
+            <div class="form-group">
+              <label for="customer-phone" class="form-label">Numéro WhatsApp <span aria-hidden="true">*</span></label>
+              <input type="tel" id="customer-phone" name="customerPhone" class="form-input" placeholder="Ex. +221 77 000 00 00" required autocomplete="tel" aria-required="true" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Produit(s) souhaité(s) <span aria-hidden="true">*</span></label>
+              <div class="form-checkboxes" role="group" aria-label="Sélectionnez vos produits">
+                <label class="form-checkbox">
+                  <input type="checkbox" name="products" value="Infusion Bissap Premium (3 500 FCFA)" />
+                  <span>Infusion Bissap Premium – 3 500 FCFA</span>
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="products" value="Infusion Gingembre & Citron (4 000 FCFA)" />
+                  <span>Infusion Gingembre &amp; Citron – 4 000 FCFA</span>
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="products" value="Thé Vert Détox Africain (4 500 FCFA)" />
+                  <span>Thé Vert Détox Africain – 4 500 FCFA</span>
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="products" value="Infusion Moringa Beauté (5 000 FCFA)" />
+                  <span>Infusion Moringa Beauté – 5 000 FCFA</span>
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="products" value="Céréales Prise de Masse (7 500 FCFA)" />
+                  <span>Céréales Prise de Masse – 7 500 FCFA</span>
+                </label>
+                <label class="form-checkbox">
+                  <input type="checkbox" name="products" value="Céréales Modelage Féminin (8 000 FCFA)" />
+                  <span>Céréales Modelage Féminin – 8 000 FCFA</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="quantity" class="form-label">Quantité</label>
+                <input type="number" id="quantity" name="quantity" class="form-input" min="1" max="99" value="1" aria-label="Quantité" />
+              </div>
+              <div class="form-group">
+                <label for="delivery" class="form-label">Mode de livraison</label>
+                <select id="delivery" name="delivery" class="form-input form-select" aria-label="Mode de livraison">
+                  <option value="Livraison à domicile">Livraison à domicile</option>
+                  <option value="Retrait sur Dakar">Retrait sur Dakar</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address" class="form-label">Adresse / Quartier <small>(si livraison)</small></label>
+              <input type="text" id="address" name="address" class="form-input" placeholder="Ex. Sacré-Cœur, Dakar" autocomplete="street-address" />
+            </div>
+
+            <button type="submit" class="btn btn--whatsapp btn--full" id="whatsapp-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Envoyer ma commande sur WhatsApp
+            </button>
+
+            <p class="order-form__note" role="status" aria-live="polite">
+              Votre commande sera transmise directement à notre équipe via WhatsApp pour confirmation.
+            </p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!--  NEWSLETTER                                -->
+    <!-- ══════════════════════════════════════════ -->
+    <section class="newsletter" id="newsletter" aria-labelledby="newsletter-title">
+      <div class="container newsletter__inner">
+        <div class="newsletter__text reveal">
+          <h2 id="newsletter-title" class="newsletter__title">Rejoins la communauté Heavenly</h2>
+          <p class="newsletter__desc">Recettes bien-être, conseils beauté, offres exclusives… réservés à notre communauté de femmes inspirées.</p>
+        </div>
+        <form class="newsletter__form reveal" id="newsletter-form" novalidate aria-label="Formulaire d'abonnement newsletter">
+          <div class="newsletter__input-wrap">
+            <label for="newsletter-email" class="sr-only">Votre adresse email</label>
+            <input
+              type="email"
+              id="newsletter-email"
+              class="newsletter__input"
+              placeholder="Votre adresse email"
+              required
+              autocomplete="email"
+              aria-required="true"
+            />
+            <button type="submit" class="btn btn--gold newsletter__btn">Je m'abonne</button>
+          </div>
+          <p class="newsletter__privacy">Pas de spam. Désabonnement possible à tout moment.</p>
+          <div class="newsletter__success" id="newsletter-success" role="alert" aria-live="polite" hidden>
+            ✓ Merci ! Vous êtes bien inscrite à la communauté Heavenly.
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  FOOTER                                    -->
+  <!-- ══════════════════════════════════════════ -->
+  <footer class="footer" id="contact" role="contentinfo">
+    <div class="container footer__inner">
+
+      <!-- Brand -->
+      <div class="footer__brand">
+        <a href="#accueil" class="logo logo--footer" aria-label="Heavenly by PENDABELLE – Retour accueil">
+          <span class="logo__heavenly">Heavenly</span>
+          <span class="logo__by">by</span>
+          <span class="logo__brand">PENDABELLE</span>
+        </a>
+        <p class="footer__tagline">Nourrir le corps.<br />Révéler la beauté.<br />Vivre Heavenly.</p>
+        <div class="footer__socials">
+          <a href="#" class="social-link" aria-label="Instagram Heavenly by PENDABELLE" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook Heavenly by PENDABELLE" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/221781636727" class="social-link" aria-label="WhatsApp Heavenly by PENDABELLE" rel="noopener noreferrer" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="TikTok Heavenly by PENDABELLE" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="footer__nav">
+        <h4 class="footer__heading">Navigation</h4>
+        <ul>
+          <li><a href="#accueil" class="footer__link">Accueil</a></li>
+          <li><a href="#produits" class="footer__link">Produits</a></li>
+          <li><a href="#bienfaits" class="footer__link">Bienfaits</a></li>
+          <li><a href="#temoignages" class="footer__link">Témoignages</a></li>
+          <li><a href="#boutique" class="footer__link">Boutique</a></li>
+        </ul>
+      </div>
+
+      <!-- Produits -->
+      <div class="footer__products">
+        <h4 class="footer__heading">Nos Produits</h4>
+        <ul>
+          <li><a href="#boutique" class="footer__link">Infusion Bissap Premium</a></li>
+          <li><a href="#boutique" class="footer__link">Infusion Gingembre &amp; Citron</a></li>
+          <li><a href="#boutique" class="footer__link">Thé Vert Détox Africain</a></li>
+          <li><a href="#boutique" class="footer__link">Infusion Moringa Beauté</a></li>
+          <li><a href="#boutique" class="footer__link">Céréales Protéinées</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer__contact">
+        <h4 class="footer__heading">Contact</h4>
+        <ul>
+          <li>
+            <a href="tel:+221781636727" class="footer__link footer__contact-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.24l3-.01a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.02-1.02a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +221 78 163 67 27
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/221781636727" class="footer__link footer__contact-link" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+          </li>
+          <li class="footer__address">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Dakar, Sénégal
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2025 Heavenly by PENDABELLE. Tous droits réservés.</p>
+        <p>Conçu avec amour au Sénégal 🌺</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp bouton flottant -->
+  <a
+    href="https://wa.me/221781636727"
+    class="whatsapp-float"
+    aria-label="Nous contacter sur WhatsApp"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="whatsapp-float__label">Commander</span>
+  </a>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Retour en haut de page" hidden>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
