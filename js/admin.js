@@ -68,7 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
 ───────────────────────────────────────────── */
 async function checkPassword(pwd) {
   try {
-    const r = await fetch('/api/orders', {
+    // ?ping=1 vérifie uniquement le mot de passe, sans requête Supabase
+    const r = await fetch('/api/orders?ping=1', {
       headers: { Authorization: `Bearer ${pwd}` }
     })
     return r.ok
@@ -129,6 +130,14 @@ async function loadOrders(showSpinner = true, silent = false) {
 
     if (r.status === 401) { logout(); return }
     if (!r.ok) throw new Error('Erreur serveur')
+
+    if (r.status === 503) {
+      const data = await r.json()
+      document.getElementById('state-loading').hidden = true
+      document.getElementById('state-empty').hidden = false
+      document.getElementById('state-empty').textContent = data.error || 'Base de données non configurée'
+      return
+    }
 
     const orders = await r.json()
 

@@ -69,6 +69,13 @@ async function createOrder(req, res) {
 async function listOrders(req, res) {
   if (!isAdmin(req)) return res.status(401).json({ error: 'Non autorisé' })
 
+  // Ping : vérifie juste le mot de passe sans toucher Supabase
+  if (req.query.ping === '1') return res.status(200).json({ ok: true })
+
+  if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_KEY) {
+    return res.status(503).json({ error: 'Base de données non configurée. Ajouter SUPABASE_URL et SUPABASE_SERVICE_KEY dans les variables Vercel.' })
+  }
+
   const { status } = req.query
   let path = '/orders?order=created_at.desc&limit=200'
   if (status && status !== 'tous') path += `&status=eq.${status}`
