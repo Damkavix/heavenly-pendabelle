@@ -304,21 +304,22 @@
 
 
 /* ──────────────────────────────────────────────
-   7. FORMULAIRE COMMANDE WHATSAPP
+   7. FORMULAIRE COMMANDE
 ─────────────────────────────────────────────── */
 (function initOrderForm() {
-  const form = document.getElementById('order-form');
-  if (!form) return;
+  const form      = document.getElementById('order-form');
+  const submitBtn = document.getElementById('order-submit-btn');
+  const feedback  = document.getElementById('order-feedback');
+  if (!form || !submitBtn) return;
 
-  const WHATSAPP_NUMBER = '221781636727';
+  const originalBtnHTML = submitBtn.innerHTML;
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
 
-    // Récupérer les valeurs
     const name     = form.querySelector('#customer-name').value.trim();
     const phone    = form.querySelector('#customer-phone').value.trim();
-    const quantity = form.querySelector('#quantity').value.trim();
+    const quantity = form.querySelector('#quantity').value;
     const delivery = form.querySelector('#delivery').value;
     const address  = form.querySelector('#address').value.trim();
 
@@ -326,80 +327,65 @@
       form.querySelectorAll('input[name="products"]:checked')
     ).map(cb => cb.value);
 
-    // Validation minimale
+    // Validation
     const errors = [];
-    if (!name)                       errors.push('Votre nom complet est requis.');
-    if (!phone)                      errors.push('Votre numéro WhatsApp est requis.');
-    if (!selectedProducts.length)    errors.push('Veuillez sélectionner au moins un produit.');
+    if (!name)                    errors.push('Votre nom complet est requis.');
+    if (!phone)                   errors.push('Votre numéro de téléphone est requis.');
+    if (!selectedProducts.length) errors.push('Veuillez sélectionner au moins un produit.');
 
     if (errors.length) {
-      showFormError(errors.join('\n'));
+      showFeedback('error', errors.join(' '));
       return;
     }
 
-    // Construire le message
-    const productList = selectedProducts.map(p => `  • ${p}`).join('\n');
-    const addrLine    = address ? `\n📍 Adresse : ${address}` : '';
+    // Envoi
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Envoi en cours…';
+    hideFeedback();
 
-    const message =
-`🌺 *Nouvelle commande – Heavenly by PENDABELLE* 🌺
+    try {
+      const r = await fetch('/api/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          customerName: name,
+          customerPhone: phone,
+          products: selectedProducts,
+          quantity: parseInt(quantity) || 1,
+          deliveryMode: delivery,
+          address: address,
+        }),
+      });
 
-👤 Nom : ${name}
-📱 WhatsApp : ${phone}
+      const data = await r.json();
 
-🛒 *Produit(s) commandé(s) :*
-${productList}
-
-📦 Quantité : ${quantity}
-🚚 Livraison : ${delivery}${addrLine}
-
----
-Merci pour votre commande ! 🙏`;
-
-    // Générer le lien WhatsApp
-    const encodedMsg = encodeURIComponent(message);
-    const waUrl      = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMsg}`;
-
-    // Ouvrir dans un nouvel onglet
-    window.open(waUrl, '_blank', 'noopener,noreferrer');
-
-    // Feedback utilisateur
-    showFormSuccess();
-    form.reset();
+      if (r.ok) {
+        showFeedback('success',
+          '✓ Commande enregistrée ! Notre équipe vous contactera sous peu pour confirmer.'
+        );
+        form.reset();
+      } else {
+        showFeedback('error', data.error || 'Une erreur est survenue. Veuillez réessayer.');
+      }
+    } catch {
+      showFeedback('error', 'Connexion impossible. Vérifiez votre connexion et réessayez.');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnHTML;
+    }
   });
 
-  function showFormError(msg) {
-    // Enlever ancienne erreur
-    const old = form.querySelector('.form-error-msg');
-    if (old) old.remove();
-
-    const el = document.createElement('div');
-    el.className = 'form-error-msg';
-    el.style.cssText = `
-      margin-top:.75rem; padding:.75rem 1rem;
-      background:rgba(200,40,40,.08); border:1px solid rgba(200,40,40,.3);
-      border-radius:8px; color:#9B1C1C; font-size:.88rem;
-      white-space: pre-line;
-    `;
-    el.setAttribute('role', 'alert');
-    el.textContent = msg;
-    form.appendChild(el);
-    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    setTimeout(() => el.remove(), 6000);
+  function showFeedback(type, msg) {
+    if (!feedback) return;
+    feedback.className = type === 'success' ? 'form-feedback form-feedback--success' : 'form-feedback form-feedback--error';
+    feedback.textContent = msg;
+    feedback.hidden = false;
+    feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (type === 'success') setTimeout(hideFeedback, 9000);
   }
 
-  function showFormSuccess() {
-    const note = form.querySelector('.order-form__note');
-    if (!note) return;
-    const original = note.textContent;
-    note.textContent = '✓ Redirection vers WhatsApp… Merci pour votre commande !';
-    note.style.color = '#1a7a35';
-    note.style.fontWeight = '600';
-    setTimeout(() => {
-      note.textContent = original;
-      note.style.color = '';
-      note.style.fontWeight = '';
-    }, 5000);
+  function hideFeedback() {
+    if (feedback) feedback.hidden = true;
   }
 })();
 

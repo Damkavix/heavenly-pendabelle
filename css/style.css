@@ -1050,6 +1050,26 @@ button { cursor: pointer; border: none; background: none; }
   line-height: 1.5;
 }
 
+/* Feedback commande */
+.form-feedback {
+  margin-top: .9rem;
+  padding: .85rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: .9rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.form-feedback--success {
+  background: rgba(37,211,102,.1);
+  border: 1px solid rgba(37,211,102,.3);
+  color: #1a7a35;
+}
+.form-feedback--error {
+  background: rgba(200,40,40,.07);
+  border: 1px solid rgba(200,40,40,.25);
+  color: #9B1C1C;
+}
+
 
 /* ═══════════════════════════════════════════════════════════
    NEWSLETTER

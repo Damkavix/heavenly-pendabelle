@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Admin – Heavenly by PENDABELLE</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════ LOGIN ══════════════════════════ -->
+  <div id="screen-login" class="login-screen">
+    <div class="login-card">
+      <div class="login-brand">
+        <span class="brand-heavenly">Heavenly</span>
+        <span class="brand-by">by</span>
+        <span class="brand-name">PENDABELLE</span>
+      </div>
+      <h1 class="login-title">Administration</h1>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="admin-pwd" class="form-label">Mot de passe</label>
+          <input
+            type="password"
+            id="admin-pwd"
+            class="form-input"
+            placeholder="••••••••"
+            required
+            autocomplete="current-password"
+          />
+        </div>
+        <button type="submit" class="btn btn--bordeaux btn--full" id="login-btn">
+          Se connecter
+        </button>
+        <p id="login-error" class="login-error" hidden>Mot de passe incorrect</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ══════════════════════ DASHBOARD ══════════════════════════ -->
+  <div id="screen-dash" hidden>
+
+    <!-- Header -->
+    <header class="adm-header">
+      <div class="adm-header__inner">
+        <div class="adm-logo">
+          <span class="brand-heavenly">Heavenly</span>
+          <span class="brand-sub">Tableau de bord</span>
+        </div>
+        <div class="adm-header__right">
+          <span id="new-badge" class="badge-new" title="Nouvelles commandes" hidden></span>
+          <button id="refresh-btn" class="btn-icon" title="Rafraîchir">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          </button>
+          <button id="logout-btn" class="btn btn--outline btn--sm">Déconnexion</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="adm-main">
+
+      <!-- Stats -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="stat-label">Total</span>
+          <span class="stat-val" id="sv-total">—</span>
+        </div>
+        <div class="stat-card stat-card--alert">
+          <span class="stat-label">Nouvelles</span>
+          <span class="stat-val" id="sv-new">—</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">En cours</span>
+          <span class="stat-val" id="sv-inprog">—</span>
+        </div>
+        <div class="stat-card stat-card--success">
+          <span class="stat-label">Livrées</span>
+          <span class="stat-val" id="sv-done">—</span>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="filter-bar" id="filter-bar">
+        <button class="filter-pill active" data-status="tous">Toutes</button>
+        <button class="filter-pill" data-status="nouveau">🔴 Nouvelles</button>
+        <button class="filter-pill" data-status="confirmé">🟡 Confirmées</button>
+        <button class="filter-pill" data-status="en_livraison">🔵 En livraison</button>
+        <button class="filter-pill" data-status="livré">🟢 Livrées</button>
+        <button class="filter-pill" data-status="annulé">⚫ Annulées</button>
+      </div>
+
+      <!-- Orders -->
+      <div id="orders-wrap">
+        <div class="empty-state" id="state-loading">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Chargement des commandes…
+        </div>
+        <div class="empty-state" id="state-empty" hidden>
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          Aucune commande pour ce filtre
+        </div>
+        <div class="orders-list" id="orders-list"></div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Toast container -->
+  <div class="toast-wrap" id="toast-wrap"></div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
